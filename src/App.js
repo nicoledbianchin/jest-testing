@@ -15,8 +15,9 @@ import {
 
 const App = () => {
   return (
-    <View>
-      <Text testID={'rectangleLengthText'}>Length</Text>
+    <View style={styles.titleContainer}>
+      <Text style={styles.title} testID={'rectangleLengthText'}>Length</Text>
+      <Text style={styles.title} testID={'rectangleWidthText'}>Width</Text>
     </View>
   );
 };
@@ -58,6 +59,16 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+  titleContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: '600',
+    color: Colors.black,
+    marginVertical: 60
+  }
 });
 
 export default App;
