@@ -3,7 +3,8 @@ import {
   StyleSheet,
   View,
   Text,
-  TextInput
+  TextInput,
+  Button
 } from 'react-native';
 
 import {
@@ -21,6 +22,7 @@ const App = () => {
       <Text style={styles.title} testID={'rectangleWidthText'}>Width</Text>
       <TextInput style={styles.input} testID={'rectangleWidthInput'}/>
     </View>
+    <Button style={styles.button} title="CALCULATE" testID={'rectangleCalculateButton'}/>
     </>
   );
 };
