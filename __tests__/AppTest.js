@@ -9,5 +9,14 @@ describe('App', () => {
       const text = app.find("[testID='rectangleLengthText']").dive().text()
       expect(text).toEqual('Length')
     })
+    it('should render the world width in testId reactangleWidthText', () => {
+      const app = shallow(<App/>)
+      const text = app.find("[testID='rectangleWidthText']").dive().text()
+      expect(text).toEqual('Width')
+    })
   })
+  
+  // describe('#TextInput', () => {
+
+  // })
 })
