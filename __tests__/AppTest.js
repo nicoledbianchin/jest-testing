@@ -28,4 +28,17 @@ describe('App', () => {
       expect(input).toHaveLength(1)
     })
   })
+
+  describe('#Button', () => {
+    it('should render a button with testID rectangleCalculateButton', () => {
+      const app = shallow(<App/>)
+      const button = app.find("[testID='rectangleCalculateButton']")
+      expect(button).toHaveLength(1)
+    })
+    it('should render a button with testID rectangleCalculateButton with the text calculate', () => {
+      const app = shallow(<App/>)
+      const button = app.find("[testID='rectangleCalculateButton']").props().title
+      expect(button).toEqual("CALCULATE")
+    })
+  })
 })

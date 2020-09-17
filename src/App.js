@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: Colors.black,
     marginTop: 60,
-    marginBottom: 20,
     marginHorizontal: 60
   },
   input: {
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
     marginRight: 60,
     width: 100,
     height: 20
-  }
+  },
 });
 
 export default App;
