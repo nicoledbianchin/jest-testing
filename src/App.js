@@ -3,22 +3,23 @@ import {
   StyleSheet,
   View,
   Text,
+  TextInput
 } from 'react-native';
 
 import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
+  Colors
 } from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
   return (
+    <>
     <View style={styles.titleContainer}>
       <Text style={styles.title} testID={'rectangleLengthText'}>Length</Text>
       <Text style={styles.title} testID={'rectangleWidthText'}>Width</Text>
     </View>
+    <TextInput testID={'rectangleLengthInput'}/>
+    <TextInput testID={'rectangleWidthInput'}/>
+    </>
   );
 };
 
