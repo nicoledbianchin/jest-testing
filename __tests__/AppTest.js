@@ -1,10 +1,13 @@
-import 'react-native';
-import React from 'react';
-import App from '../App';
+import React from 'react'
+import { mount } from 'enzyme'
+import App from '../src/App'
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-
-it('renders correctly', () => {
-  renderer.create(<App />);
-});
+describe('App', () => {
+  describe('#Text', () => {
+    it('should render the text Welcome to React Native in the first tag', () => {
+      const app = mount(<App/>)
+      const text = app.find('Text').at(0).text();
+      expect(text).toEqual('Welcome to React')
+    })
+  })
+})
