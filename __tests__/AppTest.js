@@ -16,7 +16,16 @@ describe('App', () => {
     })
   })
   
-  // describe('#TextInput', () => {
-
-  // })
+  describe('#TextInput', () => {
+    it('should render a text input in testId rectangleLenghtInput', () => {
+      const app = shallow(<App/>)
+      const input = app.find("[testID='rectangleLengthInput']")
+      expect(input).toHaveLength(1)
+    })
+    it('should render a text input in testId rectangleWidthInput', () => {
+      const app = shallow(<App/>)
+      const input = app.find("[testID='rectangleWidthInput']")
+      expect(input).toHaveLength(1)
+    })
+  })
 })
